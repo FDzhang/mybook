@@ -15,5 +15,7 @@ router.get('/books/book/:id', service.getBookById);
 router.put('/books/book', service.editBook);
 // 删除图书信息
 router.delete('/books/book/:id', service.deleteBook);
+// 查询天气
+router.get('/weather/:id',service.queryWeather);
 
 module.exports = router;

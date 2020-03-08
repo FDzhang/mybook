@@ -9,7 +9,9 @@
     "express": "^4.17.1",
     "express-art-template": "^1.0.1",
     "fs": "^0.0.1-security",
+    "http": "^0.0.0",
     "mysql": "mysqljs/mysql",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "querystring": "^0.2.0"
   }
 }

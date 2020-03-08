@@ -1,4 +1,5 @@
 const db = require('./db.js');
+const weather = require('./api.js');
 
 exports.allBooks = (req, res) => {
     let sql = 'select * from book';
@@ -53,4 +54,11 @@ exports.deleteBook = (req, res) => {
             res.json({flag: 2});
         }
     });
+};
+
+exports.queryWeather = (req, res) => {
+    let cityCode = req.params.id;
+    weather.queryWeather(cityCode, (data) => {
+        res.json({info: data.weatherinfo});
+    })
 };
